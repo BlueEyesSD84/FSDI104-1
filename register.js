@@ -31,47 +31,44 @@ function Pet(name,age,gender,breed,service,ownerName,contactPhone){
 }
 
 //creating objects
+function init(){
 let scooby = new Pet("Scooby",50,"male","Dane","Grooming","Shaggy","555-555-5555");
-    console.log(scooby);
 let scrappy = new Pet("Scrappy",50,"male","Dane","Grooming","Shaggy","555-555-5555");
-    console.log(scooby);
 let roger = new Pet("roger",50,"male","Dane","Grooming","Shaggy","555-555-5555");
-    console.log(scooby);
 
+    petSalon.pets.push(scooby,scrappy,roger);
+    console.log(petSalon.pets)
+    //calling the function
+    displayInfo();
+    displayNumberOfPets();
 
-fuction register(){
-    
 }
+window.onload=init;
 
-//for(let i=0;i<petSalon.pets.length;i++)
-   
-//console.log(petSaloon.Cost.Medium) ---- to see a specific object in the console
-//console.log(petSaloon.pets[2]); ---to find a specific object in an array i.e. position 2.  
-//console.log(petSalon.pets);
+
 function displayInfo(){
 document.getElementById("info").innerHTML=`Welcome to the ${petSalon.name} family.  We are open from ${petSalon.hours.open} to ${petSalon.hours.close}`;
 }
+function displayNumberOfPets(){
+    document.getElementById("number-pets").innerHTML=`There are ${petSalon.pets.length} pets`;
+}
+
+
 //call the displayinfo function
-displayInfo();
+//displayInfo();
 
 //To use a FOR loop and alert to display ther number of 'PETS' in the array above named 'pets'
 /*for(let i=0; i<petSalon.pets.length; i++) {/*
     document.write(petSalon.pets[i].name);
 }
 alert(` Number of pets: ${petSalon.pets.length} `)*/
-
-
-/*function displayNumberOfPets(){
-    document.getElementById("number-pets").innerHTML=`There are ${petSalon.pets.lenght} pets`;
-}*/
 //To call the function
 //displayInfo();
 //displayNumberOfPets();
 
+/* {
 
 
-
-       /* {
             name: "Scooby",
             age: 50,
             breed: "Dane",
@@ -110,3 +107,8 @@ alert(` Number of pets: ${petSalon.pets.length} `)*/
     ]
 
 }*/
+//for(let i=0;i<petSalon.pets.length;i++)
+   
+//console.log(petSaloon.Cost.Medium) ---- to see a specific object in the console
+//console.log(petSaloon.pets[2]); ---to find a specific object in an array i.e. position 2.  
+//console.log(petSalon.pets);
