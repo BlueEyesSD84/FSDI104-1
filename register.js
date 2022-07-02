@@ -45,7 +45,6 @@ let roger = new Pet("roger",50,"male","Dane","Grooming","Shaggy","555-555-5555")
 }
 window.onload=init;
 
-
 function displayInfo(){
 document.getElementById("info").innerHTML=`Welcome to the ${petSalon.name} family.  We are open from ${petSalon.hours.open} to ${petSalon.hours.close}`;
 }
