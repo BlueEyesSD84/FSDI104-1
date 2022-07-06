@@ -1,3 +1,20 @@
 h1{
    color: red;
+   text-align: center;
+}
+#footp{
+   color: black;
+   text-align: center;
+
+}
+.nav-link{
+   color:white;
+   text-align: right;
+}
+body{
+   background-color: bisque;
+}
+#selService{
+  padding: 2px;
+  margin-bottom: 15px;  
 }

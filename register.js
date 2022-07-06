@@ -41,6 +41,7 @@ let roger = new Pet("roger",50,"male","Dane","Grooming","Shaggy","555-555-5555")
     //calling the function
     displayInfo();
     displayNumberOfPets();
+    
 
 }
 window.onload=init;
@@ -49,9 +50,42 @@ function displayInfo(){
 document.getElementById("info").innerHTML=`Welcome to the ${petSalon.name} family.  We are open from ${petSalon.hours.open} to ${petSalon.hours.close}`;
 }
 function displayNumberOfPets(){
-    document.getElementById("number-pets").innerHTML=`There are ${petSalon.pets.length} pets`;
+    document.getElementById("number-pets").innerHTML=`There are ${petSalon.pets.length} pets registered.`;
+}
+function register(){
+    let petName=document.getElementById("txtPetName").value;
+    let age=document.getElementById("txtAge").value;
+    let gender=document.getElementById("txtGender").value;
+    let breed=document.getElementById("txtBreed").value;
+    let service=document.getElementById("selService").value;
+    let owner=document.getElementById("txtOwner").value;
+    let phone=document.getElementById("txtPhone").value;
+    console.log(petName,age,gender,breed,service,owner,phone);
+    //create the object
+    let newPet = new Pet(petName,age,gender,breed,service,owner,phone)
+    console.log(newPet);
+    //push the object
+    petSalon.pets.push(newPet);
+    console.log(petSalon.pets);
+    displayNumberOfPets();
+    clearInputs();
+
+}
+function test(){
+    console.log("This is a test");
 }
 
+
+function clearInputs(){
+    document.getElementById("txtPetName").value="";
+    document.getElementById("txtAge").value="";
+    document.getElementById("txtBreed").value="";
+    document.getElementById("txtGender").value="";
+    document.getElementById("selService").value="";
+    document.getElementById("txtOwner").value="";
+    document.getElementById("txtPhone").value="";
+
+}
 
 //call the displayinfo function
 //displayInfo();

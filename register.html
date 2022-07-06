@@ -11,55 +11,71 @@
 </head>
 <body>
     <header>
-
-            
-            <nav class="nav justify-content-end">
-                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                <a class="nav-link" href="about.html">About</a>
-                <a class="nav-link" href="register.html">Register</a>
-                <a class="nav-link disabled">Admin</a>
-            </nav>
+      <nav class="navbar navbar-dark bg-primary">
+          <ul class="nav justify-content-end">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="register.html">Register</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">Admin</a>
+            </li>
+          </ul>
+              </nav>
               <h1 class="display-1">The Fashion Pet</h1>
     </header>
 
     <main class="container">
         <div class="title"></div>
+        <p id="info"></p>
         <h2>Register a new pet!</h2>
         <p id="number-pets"></p>
-      <!--name,age,gender,breed,service,owner,ownerphone-->
-        <div>        
-        <input type="text" class="form-control" placeholder="Enter pet's name" id="txtPetName">
-        <input type="number" class="form-control" placeholder="Enter pet's age" id="txtAge">
-        <input type="text" class="form-control" placeholder="Enter pet's gender" id="txtGender">
-        <input type="text" class="form-control" placeholder="Enter pet's breed" id="txtBreed">
-        <select name="form-select" id="selService">
-            <option value="Cut Nails">Cut Nails</option>
-            <option value="Grooming">Grooming</option>
-            <option value="Vaccines">Vaccines</option>
-            </select>
-        <!--<input type="text" class="form-control" placeholder="Enter service needed" id="txtselService"-->
-        <input type="text" class="form-control" placeholder="Enter pet's Owner's name" id="txtOwner">
-        <input type="text" class="form-control" placeholder="Enter pet's Owners phone number" id="txtPhone">
-        <button class="btn btn-primary" id="btnSave"
-        onclick="register();">Register</button>
+       <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="txtPetName" placeholder="txtPetName">
+        <label for="floatingInput">Pets Name</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input type="number" class="form-control" id="txtAge" placeholder="txtAge">
+        <label for="floatingInput">Pets Age</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="txtGender" placeholder="txtGender">
+        <label for="floatingInput">Pets Gender</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="txtBreed" placeholder="txtBreed">
+        <label for="floatingInput">Pets Breed</label>
+      </div>
+      <select name="form-select" id="selService">
+        <option value="Cut Nails">Cut Nails</option>
+        <option value="Grooming">Grooming</option>
+        <option value="Vaccines">Vaccines</option>
+        <option value="Cut Nails">Bath</option>
+        <option value="Grooming">Walking</option>
+        <option value="Vaccines">Flea Treament</option>
+        </select>
+       <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="txtOwner" placeholder="txtOwner">
+        <label for="floatingInput">Owners Name</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="txtPhone" placeholder="txtPhone">
+        <label for="floatingInput">Owners Phone Number</label>
+      </div>
+      <button onclick="register();" class="btn btn-primary">Register</button>
         </div>
-
-       
-        
-        
-
     </main>
-
-
     <footer>
 
-        <p>All the copyrights reserved Jimmy Smith &copy; 2022</p>
-        <p id="info"></p>
+        <p id="footp">All the copyrights reserved Jimmy Smith &copy; 2022</p>
+        
         <p id="petNumber"></p>
     </footer>
-
-
-
-    <script src="register.js"></script>
+  
 </body>
 </html>
